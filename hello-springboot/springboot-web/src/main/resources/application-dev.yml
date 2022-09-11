@@ -1,0 +1,23 @@
+server:
+  port: 8081 #项目rest服务端口地址
+  servlet:
+    context-path: /word-game #项目访问上下文路径
+
+spring:
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/learn-word-game
+    username: root
+    password: 123456
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
+
